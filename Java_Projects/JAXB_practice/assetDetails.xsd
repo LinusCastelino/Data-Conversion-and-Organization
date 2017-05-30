@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Reference - https://www.w3schools.com/xml/schema_example.asp-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="assetDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="owner" type="xs:string" />
+				
+				<xs:element name="ownerDetails">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="age" type="xs:positiveInteger" />
+							<xs:element name="sex" type="xs:string"/>
+							<xs:element name="company" type="xs:string" />
+							<xs:element name="address">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="houseNumber" type="xs:string" />
+										<xs:element name="building" type="xs:string" />
+										<xs:element name="society" type="xs:string" />
+										<xs:element name="street" type="xs:string" />
+										<xs:element name="area" type="xs:string" />
+										<xs:element name="city" type="xs:string" />
+										<xs:element name="district" type="xs:string" />
+										<xs:element name="pinCode" type="xs:string" />
+										<xs:element name="state" type="xs:string" />
+										<xs:element name="country" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>    <!--ownerDetails-->
+				
+				<xs:element name="bankAccounts">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bank" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="bankName" type="xs:string" />
+										<xs:element name="customerId" type="xs:string" />
+										<xs:element name="account" minOccurs="1" maxOccurs="5">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="accountType" type="xs:string" />
+													<xs:element name="accountNo" type="xs:string" />
+													<xs:element name="ifscCode" type="xs:string" />
+													<xs:element name="card" minOccurs="0" maxOccurs="5">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="cardType" type="xs:string" />
+																<xs:element name="vendor" type="xs:string" />
+																<xs:element name="digits" type="xs:string" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="fixedDeposit" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="depositNumber" type="xs:string" />
+																<xs:element name="maturityDate" type="xs:string" />
+																<xs:element name="principal" type="xs:string" />
+																<xs:element name="roi" type="xs:string" />
+																<xs:element name="maturityValue" type="xs:string" />
+															</xs:sequence> 
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>    <!--bankAccounts-->
+
+				<xs:element name="others">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="asset" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="assetType" type="xs:string" />
+										<xs:element name="agency" type="xs:string" />
+										<xs:element name="referenceDetail" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="assetId" type="xs:string" use="required" />
+		</xs:complexType>
+		
+		
+	</xs:element>
+	
+</xs:schema>

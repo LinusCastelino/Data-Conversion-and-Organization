@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<assetDetails assetId="123" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<owner>Linus Castelino</owner>
+	
+	<ownerDetails>
+		<name>Linus Castelino</name>
+		<age>23</age>
+		<sex>Male</sex>
+		<company>Tata Consultancy Services Pvt. Ltd.</company>
+		<address>
+			<houseNumber>11</houseNumber>
+			<building>D7</building>
+			<society>Asmita Jyoti</society>
+			<street>Marve Road</street>
+			<area>Malad west</area>
+			<city>Mumbai</city>
+			<district>Mumbai</district>
+			<pinCode>400 095</pinCode>
+			<state>Maharashtra</state>
+			<country>India</country>
+		</address>
+	</ownerDetails>
+	
+	<bankAccounts>
+		<bank>
+			<bankName>ICICI</bankName>
+			<customerId>76381240</customerId>
+			<account>
+				<accountType>Savings</accountType>
+				<accountNo>015801557643</accountNo>
+				<ifscCode>ICIC0000158</ifscCode>
+				<card>
+					<cardType>Debit</cardType>
+					<vendor>Master Card</vendor>
+					<digits>3629</digits>
+				</card>
+			</account>
+			<account>
+				<accountType>PPF</accountType>
+				<accountNo>000418049580</accountNo>
+				<ifscCode>ICIC0000158</ifscCode>
+			</account>
+		</bank>
+		<bank>
+			<bankName>HDFC</bankName>
+			<customerId>62542238</customerId>
+			<account>
+				<accountType>Savings</accountType>
+				<accountNo>50100104966187</accountNo>
+				<ifscCode>HDFC0000411</ifscCode>
+				<card>
+					<cardType>Debit</cardType>
+					<vendor>VISA Platinum</vendor>
+					<digits>9486</digits>
+				</card>
+				<card>
+					<cardType>Credit</cardType>
+					<vendor>VISA Platinum</vendor>
+					<digits>7695</digits>
+				</card>
+				<fixedDeposit>
+					<depositNumber>50300146339731</depositNumber>
+					<maturityDate>31/05/2017</maturityDate>
+					<principal>16000</principal>
+					<roi>7.5</roi>
+					<maturityValue>17233</maturityValue>
+				</fixedDeposit>
+			</account>
+			<account>
+				<accountType>ERA</accountType>
+				<accountNo>50100129799568</accountNo>
+				<ifscCode>HDFC0000683</ifscCode>
+			</account>
+		</bank>
+	</bankAccounts>
+
+	<others>
+		<asset>
+			<assetType>Insurance policy</assetType>
+			<agency>LIC</agency>
+			<referenceDetail>908261266</referenceDetail>
+		</asset>
+	</others>
+</assetDetails>
