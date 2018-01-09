@@ -6,3 +6,5 @@ This repository contains Java projects implemented to demonstrate JAXB conversio
 This project contains 2 examples-
 1. Conversion of Java object to XML and vice-versa.
 2. Conversion of Java object to JSON and vice-versa.
+
+It also contains a sample project on object serialization and deserialization, and a basic ORM module project.
