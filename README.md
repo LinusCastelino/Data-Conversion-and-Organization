@@ -8,3 +8,5 @@ This project contains 2 examples-
 2. Conversion of Java object to JSON and vice-versa.
 
 It also contains a sample project on object serialization and deserialization, and a basic ORM module project.
+
+Project JAXB_Practice also demonstrates use of ANT for building the project modules and creating a project JAR file.
