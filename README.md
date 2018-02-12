@@ -1,5 +1,6 @@
-# PracticePrograms
-Computer programs by Linus
+# Data-Conversion-and-Organization
+
+Sample program modules demostrating conversion and organization of data in different forms.
 
 This repository contains Java projects implemented to demonstrate data(object) conversions and organizations into XML, JSON and serialized forms.
 
