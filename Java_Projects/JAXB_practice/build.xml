@@ -1,0 +1,45 @@
+<project name="JAXB_Practice_Build" default="defaultTarget" basedir=".">
+	
+	<property name="version" value="1.0.0" />
+	<property name="dir.src" value="src" />
+	<property name="dir.build" value="build" />
+	<property name="dir.build.classes" value="${dir.build}/classes" />
+	<property name="dir.build.javadoc">${dir.build}/javadoc</property>
+	<property name="projectJar">${dir.build}/JAXB_Sample_${version}.jar</property>
+	
+	<target name="defaultTarget">
+		<echo>Ant Project to build JAXB_Practice Project</echo>
+		<echo>Please enter a valid target name</echo>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${dir.build}" />
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${dir.build}" />
+		<mkdir dir="${dir.build.classes}" />
+	</target>
+	
+	<target name="buildProject" depends="init">
+		<echo>Ant Project to build JAXB_Practice Project</echo>
+		<echo></echo>
+		<echo>################################</echo>
+		<echo>Compiling Java classes</echo>
+		<javac srcdir="${dir.src}"
+		destdir="${dir.build.classes}"/>
+		
+		<antcall target="generateProjectJar"></antcall>
+		<antcall target="projectJavadoc"></antcall>
+	</target>
+	
+	<target name="generateProjectJar">
+		<echo>Generating JAR for project</echo>
+		<jar basedir="${dir.build.classes}" file="${projectJar}"/>
+	</target>
+	
+	<target name="projectJavadoc">
+		<echo>Generating Javadoc for JAXB_practice Project</echo>
+		<javadoc sourcepath="${dir.src}" destdir="${dir.build.javadoc}" />
+	</target>
+</project>
